@@ -16,7 +16,10 @@ export class AppComponent {
   getUsers() {
 
     this.githubService.getData().subscribe((data) => {
+
       console.log(data)
+
+      this.users = data
     })
     
 
