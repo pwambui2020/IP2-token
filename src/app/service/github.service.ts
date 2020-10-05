@@ -12,16 +12,16 @@ private username: String
     this.username ='pwambui2020'
    }
 
-  getData(): Observable<any> {
+  getData(x): Observable<any> {
      
-    const url ="https://api.github.com/users/"+this.username;
+    const url ="https://api.github.com/users/"+x;
 
     return this.http.get<any>(url)
 
   }
 
-  getRepos (){
-    const url ="https://api.github.com/users/"+this.username +"/repos";
+  getRepos (x){
+    const url ="https://api.github.com/users/"+ x +"/repos";
 
     return this.http.get<any>(url)
 
