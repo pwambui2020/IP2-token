@@ -19,23 +19,21 @@ export class AppComponent implements OnInit {
     email: '',
     bio: '',
     created_at: ''};
-
+  repos: any[]
   users: String[]
 
   constructor (private githubService:GithubService){}
   ngOnInit(): void {
     this.githubService.getData().subscribe((data) => {
-
-      console.log(data)
-
       this.profile = data
+    })
+    this.githubService.getRepos().subscribe((data) => {
+      this.repos = data
     })
   }
 
   getUsers() {
-
-    
-    
+      
 
   }
 }
