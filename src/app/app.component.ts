@@ -8,7 +8,8 @@ import { GithubService } from './service/github.service'
 })
 export class AppComponent implements OnInit {
 
-  profile = { login: '',
+  profile = {
+    login: '',
     company: '',
     location: '',
     avatar_url: '',
@@ -18,16 +19,18 @@ export class AppComponent implements OnInit {
     following: '',
     email: '',
     bio: '',
-    created_at: ''};
-username: String ="wanjaumbatia"
+    created_at: ''
+  };
+  username: String = "pwambui2020"
+  searchText: String;
   repos: any[]
   users: String[]
 
-  constructor (private githubService:GithubService){}
+  constructor(private githubService: GithubService) { }
   ngOnInit(): void {
     this.githubService.getData(this.username).subscribe((data) => {
       this.profile = data
-      
+
     })
 
     this.githubService.getRepos(this.username).subscribe((data) => {
@@ -36,8 +39,8 @@ username: String ="wanjaumbatia"
     })
   }
 
-  getUsers() {
-      
-
+  searchUser() {
+    this.username = this.searchText;
+    this.ngOnInit()
   }
 }

@@ -6,11 +6,13 @@ import {FormsModule } from "@angular/forms"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
+import { UppercasePipe } from './uppercase.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
+    UppercasePipe,
   ],
   imports: [
     BrowserModule,

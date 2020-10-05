@@ -12,8 +12,9 @@ private username: String
     this.username ='pwambui2020'
    }
 
-  getData(x): Observable<any> {
-     
+  getData(x) {
+  
+
     const url ="https://api.github.com/users/"+x;
 
     return this.http.get<any>(url)
