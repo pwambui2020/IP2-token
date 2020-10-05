@@ -1,15 +1,47 @@
 <div class="header">
-MY GITHUB PROFILE
+    MY GITHUB PROFILE
 </div>
-    
+
 <div class="container-fluid grey-bg">
-    <div class="row">
-        <div class="col-4">
-            MY PROFILE
+    <div class="row justify-content-center">
+        <div class="col-3 my-container">
+            <div class="row pt-4">
+                <div class="col-12 d-flex justify-content-center">
+                    <img class="rounded-circle" width="250px" src="{{profile.avatar_url}}">
+                </div>
+                <div class="col-12 p-4 text-center">
+                    <h3>{{profile.login}}</h3>
+                </div>
+                <div class="col-12 mt-2 p-2 text-center">
+                    <h4>Location: {{profile.location}}</h4>
+                </div>
+                <div class="col-12 mt-2 p-2 text-center">
+                    <h4>Joined on: {{profile.created_at|date}}</h4>
+                </div>
+                <div class="col-12 mt-2 p-2 text-center">
+                    <h4>Bio: {{profile.bio}}</h4>
+                </div>
+                <div class="col-6 mt-2 p-2 text-center">
+                    <h4>Followers: {{profile.followers}}</h4>
+                </div>
+                <div class="col-6 mt-2 p-2 text-center">
+                    <h4>Following: {{profile.following}}</h4>
+                </div>
+            </div>
         </div>
-        <div class="col-8"> 
-            MY REPOS
+        <div class="col-8 my-container">
+            <div class="row justify-content-center">
+                <div class="card col-4 border-default m-3" *ngFor="let repo of repos" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-default">{{repo.name}}</div>
+                    <div class="card-body text-success">
+                      <h5 class="card-title">Description</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-default">Footer</div>
+                  </div>
+            </div>
+            
         </div>
     </div>
-    
+
 </div>
