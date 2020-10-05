@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
     email: '',
     bio: '',
     created_at: ''};
+    
   repos: any[]
   users: String[]
 
