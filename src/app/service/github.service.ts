@@ -7,12 +7,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GithubService {
-
-  constructor(private http: HttpClient) { }
+private username: String
+  constructor(private http: HttpClient) {
+    this.username ='pwambui2020'
+   }
 
   getData(): Observable<any> {
      
-    const url ="https://api.github.com/users"
+    const url ="https://api.github.com/users/"+this.username;
 
     return this.http.get<any>(url)
 
