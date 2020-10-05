@@ -1,4 +1,11 @@
-table{
-    font-size: 40px;
-
+.header{
+    color: white;
+    margin: 0px;
+    background-color: #9400d3;
+    height: 80px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 50px;
+    margin: auto;
+    padding-top: 15px;
 }
