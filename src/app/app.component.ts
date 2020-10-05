@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     email: '',
     bio: '',
     created_at: ''};
-    
+
   repos: any[]
   users: String[]
 
@@ -27,8 +27,11 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.githubService.getData().subscribe((data) => {
       this.profile = data
+      
     })
+
     this.githubService.getRepos().subscribe((data) => {
+      console.log(data)
       this.repos = data
     })
   }
