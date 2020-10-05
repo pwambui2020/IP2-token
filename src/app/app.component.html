@@ -33,11 +33,13 @@
             <div class="row justify-content-center">
                 <div class="card col-4 border-default m-3" *ngFor="let repo of repos" style="max-width: 18rem;">
                     <div class="card-header bg-transparent border-default">{{repo.name}}</div>
-                    <div class="card-body text-success">
+                    <div class="card-body text-default">
                       <h5 class="card-title">Description</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">{{repo.description}}</p>
                     </div>
-                    <div class="card-footer bg-transparent border-default">Footer</div>
+                    <div class="card-footer bg-transparent border-default">
+                        <a href="{{repo.url}}" > Learn more</a>
+                    </div>
                   </div>
             </div>
             
