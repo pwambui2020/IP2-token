@@ -19,6 +19,12 @@ private username: String
     return this.http.get<any>(url)
 
   }
- 
+
+  getRepos (){
+    const url ="https://api.github.com/users/"+this.username +"repos";
+
+    return this.http.get<any>(url)
+
+  }
   }
 
